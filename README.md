@@ -20,18 +20,29 @@ below to get you started!
 
 ## Instructions
 
-1. Build a form to take user input in user_input.erb. Show that form using a
-   `GET` request at `/`.
+- Build a form to take user input in `user_input.erb`. Show that form using a
+  `GET` request at `/`.
 
-2. Create a `POST` method in your controller (`app.rb`) to receive your form's
-   `params`.
+- Create a `POST` method in your controller (`app.rb`) to receive your form's
+  `params`.
 
-3. Build a `PigLatinizer` model (in your models directory) that converts a
-   string into pig latin.
+- Build a `PigLatinizer` model (in your models directory) that converts a
+  string into pig latin. Your class should work like this (see
+  `spec/models/piglatinizer_spec.rb` for more examples):
 
-4. In your application controller, create an instance of the `PigLatinizer`
-   class to convert your user input to Pig Latin.
+  ```rb
+  pig_latinizer = PigLatinizer.new
+  pig_latinizer.piglatinize("pork")
+  # => "orkpay"
+  pig_latinizer.piglatinize("I")
+  # => "Iway"
+  ```
 
-5. Use ERB within a new view to display the final pig latin string to the user.
+- In your application controller, create an instance of the `PigLatinizer` class
+  to convert your user input to pig latin.
 
-<a href='https://en.wikipedia.org/wiki/Pig_Latin'>Pig Latin on wikipedia</a>
+- Use ERB within a new view to display the final pig latin string to the user.
+
+## Resources
+
+- [Pig Latin on Wikipedia](https://en.wikipedia.org/wiki/Pig_Latin)
